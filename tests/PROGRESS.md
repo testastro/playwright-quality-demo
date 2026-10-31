@@ -1,0 +1,72 @@
+# PROGRESS — Playwright 4-week learning project
+
+> Dán toàn bộ file này vào chat ở đầu mỗi buổi học (prompt: "Continue. Here is my PROGRESS.md").
+> Cuối mỗi buổi: tick checklist + thêm 1 dòng vào Session log + commit.
+
+**Owner:** Hung Phan · **Start:** Sat 2026-10-31 · **End:** Fri 2026-11-27 · **Rhythm:** Mon–Sat, 14:00–15:30 (Sunday off)
+**Week dates:** W1 31/10–06/11 · W2 07/11–13/11 · W3 14/11–20/11 · W4 21/11–27/11 (D1 = Saturday, D2–D6 = Mon–Fri)
+**Current position:** Week 1 · Day 2
+**Rule:** Behind schedule → cut Stretch, never MVP. Stuck > 20 min → ask Claude Code to debug.
+
+---
+
+## Checklist
+
+### Week 1 — Foundations + UI (saucedemo.com) · MVP: 5 UI tests on GitHub
+- [x] D1 Install Node LTS, VS Code + Playwright extension, Git · GitHub repo · `npm init playwright@latest` (TS, + GitHub Actions) · sample tests pass
+- [ ] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
+- [ ] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
+- [ ] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
+- [ ] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
+- [ ] D6 Buffer + review + quiz
+- [ ] ✅ **Checkpoint W1:** 5 UI tests pass locally and are on GitHub
+- [ ] _Stretch:_ simple Page Object Model for login
+
+### Week 2 — API testing with Playwright `request` (restful-booker) · MVP: 4 API tests
+- [ ] D1 HTTP basics (method, URL, status, headers, JSON) · first **GET** test
+- [ ] D2 Assert JSON body · **GET by id** + **404 negative** test
+- [ ] D3 **POST create booking** → verify with GET
+- [ ] D4 Auth token → **DELETE (or PUT)** booking
+- [ ] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
+- [ ] D6 Concept: **test pyramid** + review
+- [ ] ✅ **Checkpoint W2:** 5 UI + 4 API tests pass, organized, README v1
+- [ ] _Stretch:_ create data via API before a UI test
+
+### Week 3 — CI/CD with GitHub Actions · MVP: tests run on push/PR, failing PR blocked
+- [ ] D1 YAML basics · read generated workflow line by line · first CI run green
+- [ ] D2 Break a test on purpose · read logs · download report artifact · fix
+- [ ] D3 Branch → Pull Request → automatic check
+- [ ] D4 Flaky tests: retries, trace on retry, quarantine tag, root cause
+- [ ] D5 Branch protection + required status check (first quality gate)
+- [ ] D6 Concept: **pipeline stages** + review
+- [ ] ✅ **Checkpoint W3:** a PR with a failing test cannot be merged
+- [ ] _Stretch:_ scheduled nightly full run
+
+### Week 4 — Reporting, quality gate, story · MVP: report + gate rules + WHY.md + demo
+- [ ] D1 HTML report artifact + GitHub job summary
+- [ ] D2 Written gate rules · demo a blocked PR
+- [ ] D3 Concept: **DORA metrics** and QA's influence
+- [ ] D4 `docs/WHY.md` (1 page: context, options, choices, trade-offs, at scale)
+- [ ] D5 README how-to-run + 5-minute demo script · rehearse once
+- [ ] D6 Mock CTO interview on this repo (English)
+- [ ] ✅ **Checkpoint W4:** repo public, CI green, demo rehearsed
+- [ ] _Stretch:_ report on GitHub Pages · status badge
+
+---
+
+## Concepts — can I explain it in 60–90s in English?
+| Concept | Not yet | Shaky | Confident |
+|---|---|---|---|
+| Pipeline stages | ☐ | ☐ | ☐ |
+| Quality gate | ☐ | ☐ | ☐ |
+| Test pyramid | ☐ | ☐ | ☐ |
+| Flaky test handling | ☐ | ☐ | ☐ |
+| DORA metrics | ☐ | ☐ | ☐ |
+
+---
+
+## Session log
+### W1 D1 · 2026-10-31 · ~95 min
+- Done: Node/VS Code/Git installed, Playwright project created, 6 sample tests pass, repo public on GitHub.
+- Stuck / error: git email typo (fixed + amend); push rejected — token missing `workflow` scope (fixed).
+- Learned: CI files need a separate `workflow` permission; UI error messages can be vague — read the raw terminal log.
