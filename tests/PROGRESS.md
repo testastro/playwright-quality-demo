@@ -70,3 +70,7 @@
 - Done: Node/VS Code/Git installed, Playwright project created, 6 sample tests pass, repo public on GitHub.
 - Stuck / error: git email typo (fixed + amend); push rejected — token missing `workflow` scope (fixed).
 - Learned: CI files need a separate `workflow` permission; UI error messages can be vague — read the raw terminal log.
+### W1 D2 · 2026-11-02
+- Done: read example.spec.ts line by line; TS basics (const, object, array); codegen login test on saucedemo with toHaveURL assertion — passes.
+- Stuck / error: typo in password from codegen; test without expect still passed (false pass).
+- Learned: test() = test case, await = wait for each step, expect = expected result; no assertion = no real test.
