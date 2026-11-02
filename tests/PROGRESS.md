@@ -14,7 +14,7 @@
 
 ### Week 1 — Foundations + UI (saucedemo.com) · MVP: 5 UI tests on GitHub
 - [x] D1 Install Node LTS, VS Code + Playwright extension, Git · GitHub repo · `npm init playwright@latest` (TS, + GitHub Actions) · sample tests pass
-- [ ] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
+- [x] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
 - [ ] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
 - [ ] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
 - [ ] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
