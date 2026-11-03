@@ -15,7 +15,7 @@
 ### Week 1 — Foundations + UI (saucedemo.com) · MVP: 5 UI tests on GitHub
 - [x] D1 Install Node LTS, VS Code + Playwright extension, Git · GitHub repo · `npm init playwright@latest` (TS, + GitHub Actions) · sample tests pass
 - [x] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
-- [ ] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
+- [x] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
 - [ ] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
 - [ ] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
 - [ ] D6 Buffer + review + quiz
@@ -74,3 +74,7 @@
 - Done: read example.spec.ts line by line; TS basics (const, object, array); codegen login test on saucedemo with toHaveURL assertion — passes.
 - Stuck / error: typo in password from codegen; test without expect still passed (false pass).
 - Learned: test() = test case, await = wait for each step, expect = expected result; no assertion = no real test.
+## W1·D3 — 2026-11-03 — Locators + 2 login tests
+- Done: tests/ui/login.spec.ts — 2 tests pass (valid login, locked-out user) using getByRole/getByPlaceholder/getByTestId; removed sample files.
+- Stuck: expect('error') passed a string instead of a locator; VS Code auto-added a wrong import.
+- Learned: locator priority (role > placeholder/label > test id > avoid CSS); positive + negative tests; refactor without changing results.
