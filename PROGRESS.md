@@ -78,3 +78,6 @@
 - Done: tests/ui/login.spec.ts — 2 tests pass (valid login, locked-out user) using getByRole/getByPlaceholder/getByTestId; removed sample files.
 - Stuck: expect('error') passed a string instead of a locator; VS Code auto-added a wrong import.
 - Learned: locator priority (role > placeholder/label > test id > avoid CSS); positive + negative tests; refactor without changing results.
+## W1·D4 (2026-11-04) Done: tests/ui/cart.spec.ts – add to cart (badge=1), remove (badge hidden); 6 passed; pushed.
+- Stuck: steps placed directly in test.describe (no test()) → "No tests found"; GitHub push error once (retry OK).
+- Learned: git status → add → commit → push; every test must set up its own data (independent tests).
