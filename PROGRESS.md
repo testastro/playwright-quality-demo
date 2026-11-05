@@ -16,7 +16,7 @@
 - [x] D1 Install Node LTS, VS Code + Playwright extension, Git · GitHub repo · `npm init playwright@latest` (TS, + GitHub Actions) · sample tests pass
 - [x] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
 - [x] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
-- [ ] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
+- [x] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
 - [ ] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
 - [ ] D6 Buffer + review + quiz
 - [ ] ✅ **Checkpoint W1:** 5 UI tests pass locally and are on GitHub
@@ -81,3 +81,7 @@
 ## W1·D4 (2026-11-04) Done: tests/ui/cart.spec.ts – add to cart (badge=1), remove (badge hidden); 6 passed; pushed.
 - Stuck: steps placed directly in test.describe (no test()) → "No tests found"; GitHub push error once (retry OK).
 - Learned: git status → add → commit → push; every test must set up its own data (independent tests).
+## W1·D5 (2026-11-05) — Done
+- Done: checkout E2E test; login moved to beforeEach in cart.spec.ts; used UI mode + Trace Viewer; 5 UI tests (15 passed on 3 browsers), pushed.
+- Stuck: first run failed – missed the cart-icon click; getByText is case-insensitive/partial → use getByRole('heading').
+- Learned: read errors as Expected vs Actual; trace separates "wrong test" from "app bug".
