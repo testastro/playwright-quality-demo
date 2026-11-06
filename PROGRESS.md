@@ -17,10 +17,10 @@
 - [x] D2 TypeScript basics via sample test (variables, functions, objects, import/export, async/await) · run codegen on saucedemo
 - [x] D3 HTML + DevTools + locators · tests: **login success**, **locked-out user error**
 - [x] D4 Git add/commit/push · tests: **add to cart (badge = 1)**, **remove from cart**
-- [ ] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
-- [ ] D6 Buffer + review + quiz
-- [ ] ✅ **Checkpoint W1:** 5 UI tests pass locally and are on GitHub
-- [ ] _Stretch:_ simple Page Object Model for login
+- [x] D5 Test: **complete checkout** · debug with UI mode + Trace Viewer · beforeEach
+- [x] D6 Buffer + review + quiz
+- [x] ✅ **Checkpoint W1:** 5 UI tests pass locally and are on GitHub
+- [x] _Stretch:_ simple Page Object Model for login
 
 ### Week 2 — API testing with Playwright `request` (restful-booker) · MVP: 4 API tests
 - [ ] D1 HTTP basics (method, URL, status, headers, JSON) · first **GET** test
@@ -85,3 +85,8 @@
 - Done: checkout E2E test; login moved to beforeEach in cart.spec.ts; used UI mode + Trace Viewer; 5 UI tests (15 passed on 3 browsers), pushed.
 - Stuck: first run failed – missed the cart-icon click; getByText is case-insensitive/partial → use getByRole('heading').
 - Learned: read errors as Expected vs Actual; trace separates "wrong test" from "app bug".
+## W1·D6 — Ôn tập + Checkpoint tuần 1 (2026-11-06) ✅
+- Done: Suite 15 passed; quiz 8 câu; Stretch POM: pages/LoginPage.ts, dùng trong test login success.
+- Stuck: Click Login 2 lần (trong POM + trong test) → timeout "element detached from DOM" → xoá dòng trùng.
+- Learned: POM = SOP dùng chung, sửa 1 chỗ thay vì nhiều file. Cần ôn: playwright.config.ts (projects, testIdAttribute), codegen phải thêm expect.
+- Checkpoint W1: ĐẠT (5 UI test trên GitHub).
