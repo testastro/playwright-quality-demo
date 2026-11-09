@@ -24,7 +24,7 @@
 
 ### Week 2 — API testing with Playwright `request` (restful-booker) · MVP: 4 API tests
 - [x] D1 HTTP basics (method, URL, status, headers, JSON) · first **GET** test
-- [ ] D2 Assert JSON body · **GET by id** + **404 negative** test
+- [x] D2 Assert JSON body · **GET by id** + **404 negative** test
 - [ ] D3 **POST create booking** → verify with GET
 - [ ] D4 Auth token → **DELETE (or PUT)** booking
 - [ ] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
@@ -90,6 +90,10 @@
 - Stuck: Click Login 2 lần (trong POM + trong test) → timeout "element detached from DOM" → xoá dòng trùng.
 - Learned: POM = SOP dùng chung, sửa 1 chỗ thay vì nhiều file. Cần ôn: playwright.config.ts (projects, testIdAttribute), codegen phải thêm expect.
 - Checkpoint W1: ĐẠT (5 UI test trên GitHub).
+
 ## W2·D1 (08/11) — Done: tests/api/booking.spec.ts GET /booking pass (status 200, list not empty); baseURL; project "api" → suite 16 passed.
 - Stuck: /booking/2 trên browser trả 418 vì header Accept: text/html → hiểu vai trò của header.
 - Learned: API test = kiểm tầng dưới UI, nhanh & ổn định hơn; kiểm status trước khi đọc body; test phải fail được mới đáng tin.
+## W2·D2 - Done: 2 API test mới (GET /booking/:id kiểm field, unknown id → 404); suite api 3 passed.
+- Stuck: Viết test GET by id (lấy id từ list + template literal); nhầm list[999999999] (vị trí) với id.
+- Learned: res.json() + toHaveProperty (kể cả field lồng nhau), positive vs negative test, đọc lỗi Expected/Received, expected result lấy từ spec.
