@@ -25,7 +25,7 @@
 ### Week 2 — API testing with Playwright `request` (restful-booker) · MVP: 4 API tests
 - [x] D1 HTTP basics (method, URL, status, headers, JSON) · first **GET** test
 - [x] D2 Assert JSON body · **GET by id** + **404 negative** test
-- [ ] D3 **POST create booking** → verify with GET
+- [x] D3 **POST create booking** → verify with GET
 - [ ] D4 Auth token → **DELETE (or PUT)** booking
 - [ ] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
 - [ ] D6 Concept: **test pyramid** + review
@@ -97,3 +97,7 @@
 ## W2·D2 - Done: 2 API test mới (GET /booking/:id kiểm field, unknown id → 404); suite api 3 passed.
 - Stuck: Viết test GET by id (lấy id từ list + template literal); nhầm list[999999999] (vị trí) với id.
 - Learned: res.json() + toHaveProperty (kể cả field lồng nhau), positive vs negative test, đọc lỗi Expected/Received, expected result lấy từ spec.
+## W2·D3 · 2026-11-10 · POST tạo dữ liệu rồi verify — Done
+- Done: POST /booking → lấy bookingid → GET /booking/:id → toEqual(bookingData); test data tách thành const bookingData. Suite api 4 passed.
+- Stuck: thiếu `{` sau `data:` (2 lớp ngoặc options/body); khai báo biến giữa lời gọi post; xoá mất `});` cuối test.
+- Learned: request body/payload, round-trip test (ghi rồi đọc lại), toEqual so cả object vs toBe so một giá trị, test data dùng chung.
