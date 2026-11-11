@@ -26,7 +26,7 @@
 - [x] D1 HTTP basics (method, URL, status, headers, JSON) · first **GET** test
 - [x] D2 Assert JSON body · **GET by id** + **404 negative** test
 - [x] D3 **POST create booking** → verify with GET
-- [ ] D4 Auth token → **DELETE (or PUT)** booking
+- [x] D4 Auth token → **DELETE (or PUT)** booking
 - [ ] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
 - [ ] D6 Concept: **test pyramid** + review
 - [ ] ✅ **Checkpoint W2:** 5 UI + 4 API tests pass, organized, README v1
@@ -101,3 +101,7 @@
 - Done: POST /booking → lấy bookingid → GET /booking/:id → toEqual(bookingData); test data tách thành const bookingData. Suite api 4 passed.
 - Stuck: thiếu `{` sau `data:` (2 lớp ngoặc options/body); khai báo biến giữa lời gọi post; xoá mất `});` cuối test.
 - Learned: request body/payload, round-trip test (ghi rồi đọc lại), toEqual so cả object vs toBe so một giá trị, test data dùng chung.
+## W2·D4 – Auth token + DELETE (2026-11-11)
+- Done: POST /auth → token; test DELETE (create → delete 201 → GET 404); credentials via process.env. Suite api 6 passed.
+- Stuck: thiếu `});` cuối test; trùng tên const `response` khi copy-paste; đặt 404 sai bước (DELETE trả 201).
+- Learned: token = "visitor badge"; 403 = no permission; status 200 không đủ – phải kiểm body; không hard-code password (Git history giữ mãi).

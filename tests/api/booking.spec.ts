@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+const apiUser = process.env.API_USER ?? 'admin';
+const apiPassword = process.env.API_PASSWORD ?? 'password123';
 
 test.use({ baseURL: 'https://restful-booker.herokuapp.com' });
 test('GET /booking returns list of bookings', async ({ request }) => {
@@ -49,4 +51,39 @@ test('POST /booking creates booking, GET returns it', async ({ request }) => {
   expect(getResponse.status()).toBe(200);
   const body = await getResponse.json();
   expect(body).toEqual(bookingData);
+});
+
+test('GET /auth token',async ({ request }) => {
+  const response = await request.post('/auth', {
+    data: {
+      username: apiUser,
+      password: apiPassword
+    }
+  });
+  expect(response.status()).toBe(200);
+  const body = await response.json();
+  expect(body.token).toBeTruthy();
+  console.log('token',body.token);
+});
+
+test('DELETE /booking removes booking',async ({ request }) => {
+  const authResponse = await request.post('/auth', {
+    data: {
+      username: apiUser,
+      password: apiPassword
+    }
+  });
+  expect(authResponse.status()).toBe(200);
+  const body = await authResponse.json();
+  const token = body.token;
+  const bookingResponse = await request.post('/booking',{data: bookingData
+  });
+  const created= await bookingResponse.json();
+  const id=created.bookingid;
+   const deleteResponse = await request.delete(`/booking/${id}`, {
+     headers: { Cookie: `token=${token}` }
+   });
+   expect(deleteResponse.status()).toBe(201);
+  const getResponse = await request.get(`/booking/${id}`, { headers: { Accept: 'application/json' } });
+  expect(getResponse.status()).toBe(404);
 });
