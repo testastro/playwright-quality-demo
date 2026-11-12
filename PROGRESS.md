@@ -27,7 +27,7 @@
 - [x] D2 Assert JSON body · **GET by id** + **404 negative** test
 - [x] D3 **POST create booking** → verify with GET
 - [x] D4 Auth token → **DELETE (or PUT)** booking
-- [ ] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
+- [x] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
 - [ ] D6 Concept: **test pyramid** + review
 - [ ] ✅ **Checkpoint W2:** 5 UI + 4 API tests pass, organized, README v1
 - [ ] _Stretch:_ create data via API before a UI test
@@ -105,3 +105,7 @@
 - Done: POST /auth → token; test DELETE (create → delete 201 → GET 404); credentials via process.env. Suite api 6 passed.
 - Stuck: thiếu `});` cuối test; trùng tên const `response` khi copy-paste; đặt 404 sai bước (DELETE trả 201).
 - Learned: token = "visitor badge"; 403 = no permission; status 200 không đủ – phải kiểm body; không hard-code password (Git history giữ mãi).
+## W2·D5 — 2026-11-12
+- Done: ran tests by layer (api 6 passed/3s, ui 15 passed/17s); @smoke on 4 tests (8 passed/5.2s); README v1 on GitHub
+- Stuck: README first draft over-claimed (CI, terms I can't explain yet) → trimmed
+- Learned: smoke = fast critical-path feedback; README = executive summary, only claim what you can explain

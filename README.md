@@ -1,7 +1,5 @@
 # playwright-quality-demo
 
-A small, readable reference project for test automation with **Playwright** and **TypeScript**. It combines UI and API tests in a single suite and runs them automatically in CI.
-
 ## Purpose
 
 A portfolio project showing how design a lean, layered test strategy — UI + API tests, smoke tagging, and CI quality gates — with Playwright and TypeScript.
@@ -51,12 +49,12 @@ A portfolio project showing how design a lean, layered test strategy — UI + AP
 - Node.js (LTS) and npm
 - Git
 
-### Setup
+ ### Setup
 
-```bash
-npm ci
-npx playwright install --with-deps
-```
+   ```bash
+   npm ci
+   npx playwright install
+   ```
 
 ### Run tests
 
@@ -73,7 +71,6 @@ npx playwright install --with-deps
 | Goal                      | Command                       |
 | :------------------------ | :---------------------------- |
 | Interactive UI mode       | `npx playwright test --ui`    |
-| Step-through debugger     | `npx playwright test --debug` |
 | Open the last HTML report | `npx playwright show-report`  |
 
 ### Configuration
