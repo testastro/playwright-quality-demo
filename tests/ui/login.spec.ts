@@ -1,7 +1,7 @@
  import { LoginPage } from '../../pages/LoginPage';
 import { test, expect } from '@playwright/test';
 
-test('login with valid user shows Products page', async ({ page }) => {
+test('login with valid user shows Products page', { tag: '@smoke' }, async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
   await loginPage.login('standard_user', 'secret_sauce');

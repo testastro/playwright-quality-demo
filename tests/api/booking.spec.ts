@@ -3,7 +3,7 @@ const apiUser = process.env.API_USER ?? 'admin';
 const apiPassword = process.env.API_PASSWORD ?? 'password123';
 
 test.use({ baseURL: 'https://restful-booker.herokuapp.com' });
-test('GET /booking returns list of bookings', async ({ request }) => {
+test('GET /booking returns list of bookings', { tag: '@smoke' }, async ({ request }) => {
   const response = await request.get('/booking');
   expect(response.status()).toBe(200);
   const body = await response.json();
@@ -40,7 +40,7 @@ const bookingData=
     additionalneeds: 'Breakfast'
   }
   
-test('POST /booking creates booking, GET returns it', async ({ request }) => {
+test('POST /booking creates booking, GET returns it', { tag: '@smoke' }, async ({ request }) => {
   const response = await request.post('/booking',{data: bookingData
   });
   expect(response.status()).toBe(200);
