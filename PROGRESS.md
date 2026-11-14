@@ -28,9 +28,9 @@
 - [x] D3 **POST create booking** → verify with GET
 - [x] D4 Auth token → **DELETE (or PUT)** booking
 - [x] D5 Folders `tests/ui`, `tests/api` · `@smoke` tags · README v1
-- [ ] D6 Concept: **test pyramid** + review
-- [ ] ✅ **Checkpoint W2:** 5 UI + 4 API tests pass, organized, README v1
-- [ ] _Stretch:_ create data via API before a UI test
+- [x] D6 Concept: **test pyramid** + review
+- [x] ✅ **Checkpoint W2:** 5 UI + 4 API tests pass, organized, README v1
+- [x] _Stretch:_ create data via API before a UI test
 
 ### Week 3 — CI/CD with GitHub Actions · MVP: tests run on push/PR, failing PR blocked
 - [ ] D1 YAML basics · read generated workflow line by line · first CI run green
@@ -109,3 +109,7 @@
 - Done: ran tests by layer (api 6 passed/3s, ui 15 passed/17s); @smoke on 4 tests (8 passed/5.2s); README v1 on GitHub
 - Stuck: README first draft over-claimed (CI, terms I can't explain yet) → trimmed
 - Learned: smoke = fast critical-path feedback; README = executive summary, only claim what you can explain
+## W2·D6 — Test pyramid + Checkpoint W2 (2026-11-13) ✅
+- Done: Pyramid (UI 5 / API 6 / Unit = dev team owns). Timing chromium: API ~0.47s/test, UI ~0.72s/test. Quiz W2. Stretch: fast-login via cookie. Checkpoint W2: PASSED.
+- Stuck: forgot test.only/forbidOnly and --project vs --grep; typo in filename (fast-loin) again.
+- Learned: Layer ≠ purpose (smoke cuts across layers). Setup via shortcut, verify via UI.
