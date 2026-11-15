@@ -63,7 +63,6 @@ test('GET /auth token',async ({ request }) => {
   expect(response.status()).toBe(200);
   const body = await response.json();
   expect(body.token).toBeTruthy();
-  console.log('token',body.token);
 });
 
 test('DELETE /booking removes booking',async ({ request }) => {
