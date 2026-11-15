@@ -1,3 +1,4 @@
+# CI: runs all tests on every push / PR to main
 name: Playwright Tests
 on:
   push:
