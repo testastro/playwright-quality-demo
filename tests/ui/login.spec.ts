@@ -6,7 +6,7 @@ test('login with valid user shows Products page', { tag: '@smoke' }, async ({ pa
   await loginPage.goto();
   await loginPage.login('standard_user', 'secret_sauce');
   await expect(page).toHaveURL(/inventory/);
-  await expect(page.getByText("Products")).toBeVisible();
+  await expect(page.getByText("Productz")).toBeVisible();
 });
 
 test('login with locked user shows error message', async ({ page }) => {
