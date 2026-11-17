@@ -113,3 +113,6 @@
 - Done: Pyramid (UI 5 / API 6 / Unit = dev team owns). Timing chromium: API ~0.47s/test, UI ~0.72s/test. Quiz W2. Stretch: fast-login via cookie. Checkpoint W2: PASSED.
 - Stuck: forgot test.only/forbidOnly and --project vs --grep; typo in filename (fast-loin) again.
 - Learned: Layer ≠ purpose (smoke cuts across layers). Setup via shortcut, verify via UI.
+## W3·D2 — Done: CI đỏ có chủ đích (Productz) → đọc log + tải artifact playwright-report (3 failed/21 passed) → sửa → CI xanh 24 passed.
+- Stuck: chưa nhớ thứ tự các step trong workflow (đã ôn lại bằng ví dụ phòng test trống).
+- Learned: artifact, retries trên CI, stop the line, revert, phân loại lỗi (product/test/env).
