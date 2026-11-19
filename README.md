@@ -125,3 +125,8 @@ API_USER=myuser API_PASSWORD=mypassword npx playwright test --project=api
 | Inventory    | Product sorting, product details, logout                |
 | API          | `PUT` / `PATCH` updates and invalid-token (`403`) cases |
 | Page Objects | Cart and checkout (only `LoginPage` exists)             |
+## How changes reach main
+1. Work on a feature branch, never directly on `main`.
+2. Open a Pull Request into `main`.
+3. GitHub Actions runs all Playwright tests on the PR.
+4. Merge only when the check is green.
