@@ -119,3 +119,6 @@
 ## W3·D3 — Done: branch → PR #1 → CI green (24 passed) → merged.
 - Stuck: confused `pull` (download code) with `pull_request` (merge request).
 - Learned: PR = change request with automatic checks; main stays green.
+## W3·D4 — Done: fake flaky test (20% fail), --repeat-each, retries → "flaky" label, @flaky quarantine + --grep-invert, root cause = uncontrolled data.
+- Stuck: forgot tag syntax ({ tag: '@...' }), forgot why branch push doesn't trigger CI.
+- Learned: retry-pass is still flaky; fix the input, don't hide with retries.
