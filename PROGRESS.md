@@ -116,3 +116,6 @@
 ## W3·D2 — Done: CI đỏ có chủ đích (Productz) → đọc log + tải artifact playwright-report (3 failed/21 passed) → sửa → CI xanh 24 passed.
 - Stuck: chưa nhớ thứ tự các step trong workflow (đã ôn lại bằng ví dụ phòng test trống).
 - Learned: artifact, retries trên CI, stop the line, revert, phân loại lỗi (product/test/env).
+## W3·D3 — Done: branch → PR #1 → CI green (24 passed) → merged.
+- Stuck: confused `pull` (download code) with `pull_request` (merge request).
+- Learned: PR = change request with automatic checks; main stays green.
