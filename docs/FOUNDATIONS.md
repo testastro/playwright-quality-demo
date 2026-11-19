@@ -9,8 +9,11 @@
 - Artifact = file CI giữ lại sau khi chạy (vd: playwright-report), vì máy CI bị xoá sau mỗi lần chạy
 - Khi CI đỏ: log ở Actions → run ❌ → job test → step "Run Playwright tests"; report ở cuối trang run → Artifacts → playwright-report.zip → index.html
 - Khi CI đỏ: người vừa push xử lý; không sửa xong trong 30p–1h thì revert để main xanh lại, rồi phân loại lỗi: product / test / env
-
 ## Branch workflow
 - A branch is a separate working copy where make changes without touching `main`.
 - A Pull Request (PR) asks to merge a branch into `main`; it shows the changes and runs CI automatically.
 - Commit on the branch, open a PR, and merge only when CI is green, so `main` always stays green.
+## Flaky tests
+- A flaky test passes or fails randomly while the code has not changed.
+- Retries detect flakiness: a test that passes on retry is still flaky, not green.
+- Quarantine (tag `@flaky` + `--grep-invert`) isolates it for debugging; every quarantined test needs an owner and a deadline.
