@@ -122,3 +122,6 @@
 ## W3·D4 — Done: fake flaky test (20% fail), --repeat-each, retries → "flaky" label, @flaky quarantine + --grep-invert, root cause = uncontrolled data.
 - Stuck: forgot tag syntax ({ tag: '@...' }), forgot why branch push doesn't trigger CI.
 - Learned: retry-pass is still flaky; fix the input, don't hide with retries.
+## W3·D5 — Done: branch protection on main (require PR + required check `test`, no bypass); PR #4 failing test was blocked → fixed → merged. Checkpoint W3 passed. Screenshot: docs/images/pr-blocked-by-gate.png
+- Stuck: forgot --grep vs --grep-invert; thought CI re-ran because of the gate (it re-runs on every push to an open PR).
+- Learned: a gate nobody can bypass is proven only when it blocks something; overrides need a named role + reason + log.
