@@ -125,3 +125,7 @@
 ## W3·D5 — Done: branch protection on main (require PR + required check `test`, no bypass); PR #4 failing test was blocked → fixed → merged. Checkpoint W3 passed. Screenshot: docs/images/pr-blocked-by-gate.png
 - Stuck: forgot --grep vs --grep-invert; thought CI re-ran because of the gate (it re-runs on every push to an open PR).
 - Learned: a gate nobody can bypass is proven only when it blocks something; overrides need a named role + reason + log.
+## W3·D6 — Pipeline stages + Checkpoint W3 (2026-11-20)
+- Done: mapped 7 stages (trigger→install→build→test→report→gate→deploy) to repo; docs/PIPELINE.md with owners; docs/SYNTAX.md (8 patterns). Checkpoint W3 passed.
+- Stuck: build ≠ install browsers; merge ≠ deploy; gate must be BEFORE deploy.
+- Learned: owner = a role, not a tool; gates go before risky steps, monitoring after deploy.
