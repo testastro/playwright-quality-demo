@@ -17,3 +17,7 @@
 - A flaky test passes or fails randomly while the code has not changed.
 - Retries detect flakiness: a test that passes on retry is still flaky, not green.
 - Quarantine (tag `@flaky` + `--grep-invert`) isolates it for debugging; every quarantined test needs an owner and a deadline.
+## Quality gate
+- A quality gate is a mandatory, automated rule a change must pass before it can be merged.
+- In this repo, `main` is protected: every change needs a Pull Request, and the CI check `test` must be green before merging.
+- Admin bypass is disabled because I am the only person in the repo, so a bypass would make the gate useless; in a real team, overrides should be allowed only for a named role, with a reason, and logged.
