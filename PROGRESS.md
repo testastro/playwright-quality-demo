@@ -129,3 +129,6 @@
 - Done: mapped 7 stages (trigger→install→build→test→report→gate→deploy) to repo; docs/PIPELINE.md with owners; docs/SYNTAX.md (8 patterns). Checkpoint W3 passed.
 - Stuck: build ≠ install browsers; merge ≠ deploy; gate must be BEFORE deploy.
 - Learned: owner = a role, not a tool; gates go before risky steps, monitoring after deploy.
+## W4·D1 (21/11) Done — list/html/json reporters, CI job summary (24 passed/0/0) + artifact; actions @v4 → @v7 (Node 24).
+- Stuck: YAML indentation (run: deeper than if:); almost opened PR in the wrong repo; template literal backticks.
+- Learned: report per audience (list → CI log, html → debugger, summary → manager); 24 = test runs, not test cases.
