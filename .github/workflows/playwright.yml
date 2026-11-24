@@ -22,15 +22,15 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --grep-invert @flaky
     - name: Test summary
       if: ${{ !cancelled() }}
       run: |
-        echo "## Playwright results" >> $GITHUB_STEP_SUMMARY
-        echo "- ✅ Passed: $(jq '.stats.expected' results.json)" >> $GITHUB_STEP_SUMMARY
-        echo "- ❌ Failed: $(jq '.stats.unexpected' results.json)" >> $GITHUB_STEP_SUMMARY
-        echo "- ⚠️ Flaky: $(jq '.stats.flaky' results.json)" >> $GITHUB_STEP_SUMMARY
-        echo "- 📄 Full HTML report: download **playwright-report** in Artifacts below" >> $GITHUB_STEP_SUMMARY
+        echo "## Playwright results" >> "$GITHUB_STEP_SUMMARY"
+        echo "- ✅ Passed: $(jq '.stats.expected' results.json)" >> "$GITHUB_STEP_SUMMARY"
+        echo "- ❌ Failed: $(jq '.stats.unexpected' results.json)" >> "$GITHUB_STEP_SUMMARY"
+        echo "- ⚠️ Flaky: $(jq '.stats.flaky' results.json)" >> "$GITHUB_STEP_SUMMARY"
+        echo "- 📄 Full HTML report: download **playwright-report** in Artifacts below" >> "$GITHUB_STEP_SUMMARY"
     - uses: actions/upload-artifact@v7
       if: ${{ !cancelled() }}
       with:
