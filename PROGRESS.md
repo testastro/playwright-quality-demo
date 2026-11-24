@@ -132,3 +132,11 @@
 ## W4·D1 (21/11) Done — list/html/json reporters, CI job summary (24 passed/0/0) + artifact; actions @v4 → @v7 (Node 24).
 - Stuck: YAML indentation (run: deeper than if:); almost opened PR in the wrong repo; template literal backticks.
 - Learned: report per audience (list → CI log, html → debugger, summary → manager); 24 = test runs, not test cases.
+## W4·D2 · Quality gate rules + blocked PR demo — 24/11 (planned 23/11)
+- Done: docs/QUALITY_GATE.md (any failing test in required check blocks merge; Lead/QAM can override); compared rules with branch protection settings; rehearsed blocked-PR demo.
+- Stuck: … (chị điền: chỗ nào khó sáng nay, nếu không có ghi "none")
+- Learned: a gate is only real if it's automated, required, and override needs a written reason + follow-up ticket.
+## W4·D3 · DORA metrics — 24/11
+- Done: 4 DORA metrics + how QA affects each; docs/DORA.md (5 lines incl. flaky risk) merged via PR.
+- Stuck: lead time definition (commit → production, not regression time); forgot to save file before commit → empty file, redid on new branch.
+- Learned: QA impacts all 4 metrics — fast automated tests make releases cheap; gate lowers CFR; nightly + trace cut time to restore; flaky tests hurt all.
