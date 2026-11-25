@@ -140,3 +140,6 @@
 - Done: 4 DORA metrics + how QA affects each; docs/DORA.md (5 lines incl. flaky risk) merged via PR.
 - Stuck: lead time definition (commit → production, not regression time); forgot to save file before commit → empty file, redid on new branch.
 - Learned: QA impacts all 4 metrics — fast automated tests make releases cheap; gate lowers CFR; nightly + trace cut time to restore; flaky tests hurt all.
+## W4·D4 (25/11) – Done: docs/WHY.md (Context, Options, Decisions, Trade-offs, At team scale), PR #15 merged.
+- Stuck: couldn't name the 3-browser trade-off alone; WHY.md mostly drafted with tutor help.
+- Learned: trade-off pattern "We get X, but we pay Y"; WHY.md answers the CTO's "why" in advance.
